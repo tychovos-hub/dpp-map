@@ -73,6 +73,6 @@ jobs:
           echo "${GITLEAKS_SHA256}  $RUNNER_TEMP/$tarball" | sha256sum -c -
           mkdir -p "$RUNNER_TEMP/gitleaks"
           tar -xzf "$RUNNER_TEMP/$tarball" -C "$RUNNER_TEMP/gitleaks" gitleaks
-      - name: Scan full git history
+      - name: Scan history of HEAD
         run: |
           "$RUNNER_TEMP/gitleaks/gitleaks" git --redact --verbose --exit-code 1 --log-opts="HEAD" .
