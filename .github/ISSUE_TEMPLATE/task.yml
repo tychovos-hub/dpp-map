@@ -1,0 +1,37 @@
+name: Task
+description: One issue-sized piece of work. One issue = one branch = one small PR.
+title: "[Task]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The approved plan names which files change and how. On any deviation, stop and report.
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What this task should achieve and why.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: How we know the task is done.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: What this task must not do.
+  - type: textarea
+    id: files-allowed
+    attributes:
+      label: Files allowed to change
+      description: The only files this task may create, change or delete.
+    validations:
+      required: true
