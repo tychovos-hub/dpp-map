@@ -1,0 +1,89 @@
+name: Source
+description: Record the source for one field or access rule.
+title: "[Source]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One issue per field or rule.
+        - Never write article numbers, fields or obligations from memory. If unsure, write "to verify".
+        - Verbatim quotes only for sourceType "binding".
+        - Only the owner sets or changes a `verified` flag.
+        - No company names or interview material.
+  - type: input
+    id: subject
+    attributes:
+      label: Field or rule
+      description: The schema field or access rule this source supports.
+    validations:
+      required: true
+  - type: dropdown
+    id: source-type
+    attributes:
+      label: sourceType
+      options:
+        - binding
+        - official-guidance
+        - industry-guidance
+    validations:
+      required: true
+  - type: input
+    id: document
+    attributes:
+      label: Document / CELEX
+      description: "binding: CELEX number. Other sourceTypes: document title."
+    validations:
+      required: true
+  - type: input
+    id: publisher
+    attributes:
+      label: Publisher (non-binding only)
+      description: Leave empty for sourceType "binding".
+  - type: input
+    id: version-date
+    attributes:
+      label: Consolidated version date
+      description: "binding: date of the consolidated version used. Other sourceTypes: version or publication date."
+      placeholder: YYYY-MM-DD
+  - type: input
+    id: location
+    attributes:
+      label: Location (article/annex, part, point)
+      description: Where in the document the field or rule is found.
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      description: Language version used, e.g. EN.
+  - type: textarea
+    id: quote
+    attributes:
+      label: Verbatim quote (binding only)
+      description: Exact text from the binding source. Leave empty for other sourceTypes.
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Direct link to the document or the cited location.
+    validations:
+      required: true
+  - type: input
+    id: date-checked
+    attributes:
+      label: Date checked
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+  - type: dropdown
+    id: link-type
+    attributes:
+      label: Link type
+      description: How the field or rule follows from the source.
+      options:
+        - literal in source
+        - derived
+        - assumption
+    validations:
+      required: true
