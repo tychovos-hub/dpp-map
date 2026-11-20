@@ -1,3 +1,3 @@
 # dpp-map
-DPP mapping voor thesis
-dpp-map. All rights reserved.
+DPP mapping tool 
+DPP mapping tool. All rights reserved.
