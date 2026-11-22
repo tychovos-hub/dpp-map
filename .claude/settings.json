@@ -15,7 +15,17 @@
       "Bash(git push * -f*)",
       "Bash(git push *+*)",
       "Bash(gh api *pulls/*/merge*)",
-      "Bash(gh pr merge*)"
+      "Bash(gh pr merge*)",
+      "mcp__github__merge_pull_request",
+      "mcp__github__enable_pr_auto_merge",
+      "mcp__github__push_files",
+      "mcp__github__create_or_update_file",
+      "mcp__github__delete_file",
+      "mcp__github__pull_request_review_write",
+      "mcp__github__actions_run_trigger",
+      "mcp__github__create_repository",
+      "mcp__github__fork_repository",
+      "mcp__claude-code-remote__add_repo"
     ]
   },
   "hooks": {
