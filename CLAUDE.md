@@ -22,6 +22,7 @@ schema file per product group, not in core code.
 - One issue = one branch = one small PR.
 - Never push to `main`.
 - Never merge a PR: no `gh api` merge calls, no merge tools. The owner merges.
+- Never tick PR checklist boxes; the owner does that.
 - Do only what the task asks. No unrequested cleanup, refactoring, renaming
   or branch deletion; propose it instead.
 
